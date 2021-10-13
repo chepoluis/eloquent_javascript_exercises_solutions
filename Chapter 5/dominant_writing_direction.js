@@ -1,4 +1,4 @@
-// My solution - To do
+// My solution - To do https://stackoverflow.com/questions/66199733/how-does-this-code-from-eloquent-js-determine-the-dominant-writing-direction
 
 // Book solution
 
