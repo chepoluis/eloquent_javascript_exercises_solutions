@@ -27,6 +27,9 @@ class Group {
         return group;
     }
 
+    [Symbol.iterator]() {
+        return new GroupIterator(this);
+    }
     // static set = new Set();
 
     // static from(array) {
@@ -36,4 +39,22 @@ class Group {
 
     //     return this.set;
     // }
+}
+
+class GroupIterator {
+    constructor(group) {
+      this.group = group;
+      this.position = 0;
+    }
+  
+    next() {
+      if (this.position >= this.group.set.length) {
+        return {done: true};
+      } else {
+        let result = {value: this.group.set[this.position],
+                      done: false};
+        this.position++;
+        return result;
+      }
+    }
 }
